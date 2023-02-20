@@ -1,0 +1,28 @@
+.navEl > ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.navEl ul > li {
+  list-style-type: none;
+  padding: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.container,.description {
+  padding-top: 4%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 40px;
+}
+.description{
+  gap: 40px;
+}
+
+.mainContent{
+  margin-top: 20px;
+  padding: 20px;
+}
