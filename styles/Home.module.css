@@ -3,13 +3,15 @@
   flex-direction: row;
   justify-content: center;
 }
-.navEl ul > li {
+.lEl {
   list-style-type: none;
   padding: 30px;
   text-decoration: none;
   font-weight: bold;
   font-size: 1.2rem;
+  color: black;
 }
+
 .container,.description {
   padding-top: 4%;
   display: flex;

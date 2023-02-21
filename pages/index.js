@@ -2,8 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import { Inter } from "@next/font/google";
 import styles from "@/styles/Home.module.css";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
@@ -15,14 +17,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <nav className={styles.navEl}>
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Blogs</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
         <div className={styles.container}>
           <div className={styles.description}>
             <h1>Hunting Coder&nbsp;</h1>
