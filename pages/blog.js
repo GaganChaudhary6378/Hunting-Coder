@@ -12,7 +12,6 @@ export default function () {
   );
   },[])
 
-  console.log(blogs)
   const content=blogs.map(item => {
     return (
       <div className={styles.mainContent} key={item.title}>

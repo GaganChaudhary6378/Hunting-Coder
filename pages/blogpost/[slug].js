@@ -3,14 +3,25 @@ import { useRouter } from "next/router";
 import styles from "@/styles/BlogPost.module.css";
 
 export default function(){
+    const [blog,setBlog]=React.useState();
     const router=useRouter();
-    const {slug}=router.query;
+    React.useEffect(() => {
+        if(!router.isReady){
+            return;
+        }
+        const {slug}=router.query;
+        fetch(`http://localhost:3000/api/getBlogs?slug=${slug}`)
+        .then((response) => response.json())
+        .then((data) =>
+        setBlog(data)
+        );
+    },[router.isReady])
     return (
         <div className={styles.container}>
-            <h1>Title of the page {slug}</h1>
+            <h1>{blog && blog.title}</h1>
             <hr/>
             <div>
-                Lorem ipsum dolor sit ameet consectetur, adipisicing elit.
+                {blog && blog.content}
             </div>
         </div>
     )
