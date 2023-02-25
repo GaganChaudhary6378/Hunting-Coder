@@ -1,4 +1,4 @@
-.container{
+.mainContent{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7,4 +7,13 @@
 .heading1{
     color:black;   
     cursor: pointer;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cont{
+    max-width: 45vw;
 }
