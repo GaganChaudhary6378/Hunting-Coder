@@ -21,7 +21,7 @@ export default function(){
             <h1>{blog && blog.title}</h1>
             <hr/>
             <div>
-                {blog && blog.content}
+                <p className={styles.content}>{blog && blog.content}</p>
             </div>
         </div>
     )
