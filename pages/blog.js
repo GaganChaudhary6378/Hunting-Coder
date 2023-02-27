@@ -1,16 +1,11 @@
 import React from "react";
 import styles from "@/styles/Blog.module.css";
 import Link from "next/link";
+import * as fs from 'fs';
  
-export default function () {
-  const [blogs,setBlogs]=React.useState([]);
-  React.useEffect(() => {
-    fetch("http://localhost:3000/api/blogs")
-  .then((response) => response.json())
-  .then((data) =>
-  setBlogs(data.allBlogs)
-  );
-  },[])
+export default function blog (props) {
+  const [blogs,setBlogs]=React.useState(props.allBlogs);
+  // setBlogs(props.allBlogs)
 
   const content=blogs.map(item => {
     return (
@@ -28,5 +23,28 @@ export default function () {
       {content}
     </div>
   );
+}
 
+// so here we are creating a get serverSideProp that will work only at the request time
+// so the work that we are doing in the export default function blog now we are doing that in this function
+  // export async function getServerSideProps(context) {
+  //   let data=await fetch("http://localhost:3000/api/blogs")
+  //   let allBlogs=await data.json();
+  //   return {
+  //     props: allBlogs, // will be passed to the page component as props
+  //   }
+  // }
+  
+  export async function getStaticProps(context) {
+    let data=await fs.promises.readdir("blogData");
+  let myFile;
+  let allBlogs=[];
+  for(let index=0;index<data.length;index++){
+    const item=data[index];
+    myFile=await fs.promises.readFile(('blogData/'+item),'utf-8')
+    allBlogs.push(JSON.parse(myFile)); 
+  };
+  return {
+    props:{allBlogs},
+  }
 }
