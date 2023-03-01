@@ -14,6 +14,7 @@ export default function blog (props) {
         <h3 className={styles.heading1}>{item.title}</h3>
         </Link>
         <p className={styles.cont}>{item.content.substr(0,400)}</p>
+        <Link style={{textDecoration:'none'}} href={`/blogpost/${item.slug}`}><button className={styles.btnEl}>Read More</button></Link>
       </div>
     )
   })

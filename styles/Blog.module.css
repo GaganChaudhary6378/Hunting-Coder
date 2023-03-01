@@ -17,3 +17,14 @@
 .cont{
     max-width: 45vw;
 }
+.btnEl{
+    background-color: black;
+    color: white;
+    height: 30px;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  .btnEl:hover{
+    cursor: pointer;
+    color: rgb(192, 192, 164);
+  }
