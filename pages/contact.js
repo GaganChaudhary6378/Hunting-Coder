@@ -70,7 +70,7 @@ export default function () {
             id="email"
             name="email"
             placeholder="Email Address"
-          />
+            />
         </div>
         <div class={styles.formGroup}>
           <label class="form-check-label" for="exampleCheck1">
@@ -83,6 +83,7 @@ export default function () {
             name="phone"
             class="form-check-input"
             id="phone"
+            placeholder="Phone Number"
           />
         </div>
         <div class={styles.formGroup}>
@@ -97,7 +98,7 @@ export default function () {
             placeholder="Description"
           />
         </div>
-        <button type="submit" onClick={handleClick} class="btn btn-primary">
+        <button type="submit" onClick={handleClick} className={styles.btn}>
           Submit
         </button>
       </form>

@@ -1,3 +1,6 @@
+.para{
+  max-width: 600px;
+}
 .navEl > ul {
   display: flex;
   flex-direction: row;
@@ -11,20 +14,36 @@
   font-size: 1.2rem;
   color: black;
 }
-
+ 
 .container,.description {
-  padding-top: 4%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
-.description{
+/* .description{
   gap: 40px;
-}
+} */
 
 .mainContent{
   margin-top: 20px;
-  padding: 20px;
+  /* padding: 20px; */
+}
+.childHead{
+  font-size: 2.5rem;
+}
+.mainContent{
+  font-size: 1.2rem;
+}
+.btnEl{
+  background-color: black;
+  color: white;
+  height: 30px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.btnEl:hover{
+  cursor: pointer;
+  color: rgb(192, 192, 164);
 }
