@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className={styles.navEl}>
+    <div className={styles.navEl}>
       <ul>
         <Link href="/">
           <li className={styles.lEl}>Home</li>
@@ -19,6 +19,6 @@ export default function Navbar() {
           <li className={styles.lEl}>Contact</li>
         </Link>
       </ul>
-    </nav>
+    </div>
   );
 }
